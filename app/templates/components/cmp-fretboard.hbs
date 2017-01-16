@@ -1,0 +1,24 @@
+
+{{!-- <div class="buttons-panel">
+	<button {{action "insertNote" 0 on="click"}}>ADD 1</button>
+	<button {{action "insertNote" 1 on="click"}}>ADD 2</button>
+	<button {{action "insertNote" 2 on="click"}}>ADD 3</button>
+	<button {{action "insertNote" 3 on="click"}}>ADD 4</button>
+</div> --}}
+
+<div class="screen-container">
+
+	<div class="fretboard-container">
+		<div class="frets-viewport">
+			{{#each frets as |fret|}}
+				{{cmp-fret fret=fret height=fretHeight}}
+			{{/each}}
+		</div>
+		<div class="strings-viewport">
+			{{#each notes as |stringNotes|}}
+				{{cmp-string notes=stringNotes}}
+			{{/each}}
+		</div>
+	</div>
+
+</div>
